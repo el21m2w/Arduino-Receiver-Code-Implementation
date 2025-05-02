@@ -2,11 +2,7 @@
 
 #define numMotors 3
 
-/*************************************************************
-   Cytron Motor Driver array 
-   If your Cytron library doesn't support PWM_PWM mode,
-   use PWM_DIR (and wire accordingly).
-*************************************************************/
+
 CytronMD motor[numMotors] = {
   CytronMD(PWM_PWM, 8, 9),   // Motor 0
   CytronMD(PWM_PWM, 6, 7),   // Motor 1
@@ -16,7 +12,7 @@ CytronMD motor[numMotors] = {
 /*************************************************************
    Encoder pin arrays for full 4× decoding.
    On Arduino Mega, valid external interrupts:
-     2,3,18,19,20,21
+
 *************************************************************/
 const int EA[numMotors] = { 20, 18, 2 }; 
 const int EB[numMotors] = { 21, 19, 3 };
